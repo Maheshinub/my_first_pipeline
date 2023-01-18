@@ -33,6 +33,10 @@ mkdir new_folder  ##this creates a new folder in the present located directory
 ## we use this command to load the data from the local to the table that we have created.
 load data local inpath 'need to provide the location of the file' into table department_data;
 
+(OR)
+
+load data local inpath 'file:///Users/mreddy26/Desktop/department_data.csv' into table department_data;
+
 ##to check the data is present or no use the sql statement
 select * from department_data;
 
