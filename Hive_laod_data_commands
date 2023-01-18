@@ -1,0 +1,42 @@
+##Create a table 
+
+CREATE TABLE student(
+Student_Name STRING,
+Student_Rollno INT,
+Student_Marks FLOAT)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','; 
+
+create database mahesh_test;
+
+##if we already have a database we can use the one
+
+use mahesh_test;    ##this is the database that already exist and we are using that database
+
+##to create a table
+
+create table department_data
+(
+dept_id int,
+dept_name string,
+manager_id int,
+salary int)
+row format delimited
+fields terminated by ','; 
+
+show tables;        ##to check the table is created or no
+
+describe formatted student;     ##this shows the entire detail of the data
+
+mkdir new_folder  ##this creates a new folder in the present located directory
+
+## we use this command to load the data from the local to the table that we have created.
+load data local inpath 'need to provide the location of the file' into table department_data;
+
+##to check the data is present or no use the sql statement
+select * from department_data;
+
+
+
+
+
